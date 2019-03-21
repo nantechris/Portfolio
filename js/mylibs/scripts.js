@@ -1,4 +1,27 @@
 /* ========================= */
+/*        ACTIVE MENU        */
+/* ========================= */
+function activateMenu(event){
+    var scrollPosition = $(window).scrollTop();
+    $('#navbar a').each(function () {
+        var currentLink = $(this);
+        var refElement = $(currentLink.attr("href"));
+        if (refElement.position().top <= scrollPosition+500 && refElement.position().top + refElement.height() > scrollPosition) {
+            $('#navbar ul li a').removeClass("active");
+            currentLink.addClass("active");
+            // $(currentLink.parent()).addClass("effect");
+        }
+        else{
+            currentLink.removeClass("active");
+        }
+    });
+}
+
+$(document).ready(function () {
+    $(document).on("scroll", activateMenu);
+});
+
+/* ========================= */
 /*          CAROUSEL         */
 /* ========================= */
 $('.carousel').slick({
@@ -32,3 +55,4 @@ $('.carousel').slick({
 $('img').bind('contextmenu', function(e) {
     return false;
 }); 
+
