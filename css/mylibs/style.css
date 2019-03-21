@@ -1,0 +1,671 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* ================================================== */
+/*                       COMMON                       */
+/* ================================================== */
+/* ========================= */
+/*         SEPARATOR         */
+/* ========================= */
+.separator {
+    position: relative;
+    margin: 10px auto;
+    max-width: 250px;
+    text-align: center;
+}
+
+.separator i {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #FFF;
+    border-radius: 100%;
+    border-bottom: 4px solid #2E373E; 
+    color: #2E373E;
+    line-height: 50px;
+    z-index: 2;    
+}
+
+.separator span {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #FFF;
+}
+
+/* ================================================== */
+/*                    INTRODUCTION                    */
+/* ================================================== */
+#introduction {
+    display: flex;
+    position: relative;
+    height: 100%;
+    font-family: Arial Rounded MT;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.4);
+    z-index: 3;
+}
+
+/* ========================= */
+/*      MENU NAVIGATION      */
+/* ========================= */
+#menu {
+    float:left;
+    width: 50%; 
+    height:100%; 
+    background:#75B8BD;
+    text-align: center;
+}
+
+#menu ul {
+    max-width: 200px;
+    margin: 35% auto;
+    padding: 0;
+    list-style: none;
+}
+
+#menu ul li {
+    margin-bottom: 10px;
+}
+
+#menu ul li a {
+    display: block;
+    padding: 6px;
+    color: #FFF;
+    border: 1px solid #FFF;
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    color: #75B8BD;
+    background: #FFF;
+    transition: 0.5s ease-in;
+}
+
+/* ========================= */
+/*        PRESENTATION       */
+/* ========================= */
+#presentation {
+    float: right;
+    width: 50%; 
+    height:100%;
+    background: #2E373E;
+}
+
+#presentation img {
+    display: block;
+    width: 40%;
+    margin: 70px auto 0;
+}
+
+#presentation h1 {
+    margin: 50px 0 20px;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px; 
+}
+
+#presentation p {
+    margin: 0 110px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 2px;  
+}
+
+#presentation:after {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.5) 150%,rgba(0,0,0,.8) 100%);
+    content: '';
+  }
+  
+#presentation a {
+    position: absolute;
+    bottom: 20px;
+    left: 73%;
+    padding-top: 70px;
+    color: #FFF;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: .1em;
+    z-index: 1;
+    transition: opacity .3s;
+    transform: translate(0, -50%);
+}
+  
+#presentation a:hover {
+    opacity: .5;
+}
+  
+#presentation a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-bottom: 1px solid #FFF;
+    border-left: 1px solid #FFF;
+    animation: sdb06 1.5s infinite;
+    transform: rotateZ(-45deg);
+}
+  
+@keyframes sdb06 {
+    0% {
+      transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+}
+
+
+
+/* =========================================================================== */
+/*                                   CONTENT                                   */
+/* =========================================================================== */
+#content {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ================================================== */
+/*                    SIDEBAR MENU                    */
+/* ================================================== */
+#sidebarMenu {
+    position: absolute;
+    top: 0;
+    width: 17%;
+    height: 100%;
+    background: #2E373E;
+    font-family: Arial Rounded MT;
+    text-align: center;
+    z-index: 2;
+}
+
+#sidebarMenu img {
+    margin-top: 20%;
+    width: 80%;
+}
+
+#sidebarMenu #navbar {
+    margin-top: 25%;
+}
+
+#sidebarMenu #navbar ul {
+    margin: 0 5px;
+    padding: 0;
+    list-style: none;
+}
+
+#sidebarMenu #navbar ul li {
+    margin-bottom: 5px;
+    background: #75B8BD;
+}
+
+#sidebarMenu #navbar ul li a {
+    display: block;
+    padding: 8px;
+    color: #FFF;
+    font-weight: 400;
+    text-decoration: none;
+    transition: 0.5s ease-in;
+}
+
+#sidebarMenu #navbar ul li a:hover {
+    color: #2E373E;
+    background: #FFF;  
+}
+
+
+
+/* ================================================== */
+/*                        ABOUT                       */
+/* ================================================== */
+#aboutme {
+    position: relative;
+    left: 17%;
+    width: calc(100% - 17%);
+}
+
+#aboutme h2 {
+    margin: 0;
+    padding: 40px 0 0;
+    color: #2E373E;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    letter-spacing: 2px;
+}
+
+#aboutme .separator i {
+    border-bottom: 4px solid rgb(96, 121, 139);
+}
+
+#aboutme .separator i, #aboutme .separator span {
+    color: #FFF;
+    background: #2E373E;
+}
+
+#aboutme #description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    color: #2E373E;
+}
+
+#aboutme img {
+    max-width: 25%;
+    padding: 20px 40px;
+}
+
+#aboutme #description div {
+    margin: 50px;
+}
+
+#aboutme #description div ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#aboutme #description div ul li {
+    margin-bottom: 10px;
+}
+
+#aboutme #description div ul li i{
+    width: 50px;
+    text-align: center;
+    background: #75B8BD;
+    border-radius: 100%;
+    border-bottom: 4px solid #2E373E;
+    color: #FFF;
+    line-height: 50px;
+}
+
+#aboutme #description div ul span {
+    padding: 8px;
+    margin-left: 20px;
+    border-radius: 6px;
+    border-bottom: 4px solid #2E373E;
+    color: #FFF;
+    background: #75B8BD;    
+    font-weight: bold;
+}
+
+#aboutme h4 {
+    margin: 0 100px;
+    color: #75B8BD;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#aboutme #details {
+    margin: 0 100px 50px;
+    color: #2E373E;
+    line-height: 30px;
+}
+
+
+
+/* ================================================== */
+/*                         CV                         */
+/* ================================================== */
+#cv {
+    position: relative;
+    left: 17%;
+    width: calc(100% - 17%);
+    padding-bottom: 30px;
+    background: #75B8BD;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.4);
+}
+
+#cv h4 {
+    margin: 0;
+    padding: 40px 0 0 0;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+    letter-spacing: 1px;
+}
+
+#cv h2 {
+    margin: 0;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+    letter-spacing: 2px;
+}
+
+/* ========================= */
+/*      CAREER TIMELINE      */
+/* ========================= */
+#cv #career-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto 70px;
+    z-index: 1;
+}
+
+#cv #career-line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 6.8%;
+    background: #FFF;
+    /* box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.4); */
+}
+
+/* ========================= */
+/*       CAREER CONTENT      */
+/* ========================= */
+#cv .career-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* ========================= */
+/*        CAREER DATE        */
+/* ========================= */
+#cv .career-date {
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+    background: #FFF;
+    border-radius: 100%;
+    border-bottom: 4px solid #2E373E;
+    /* box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.4); */
+    line-height: 20px;
+}
+
+#cv .career-date h4 {
+    color: #75B8BD;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#cv .career-date span {
+    color: #2E373E;
+    font-size: 14px;
+}
+
+/* ========================= */
+/*     CAREER INFORMATION    */
+/* ========================= */
+#cv .career-information {
+    position: relative;
+    width: 70%;
+    margin: 0px 40px;
+    padding: 15px;
+    background: #FFF;
+    border-radius: 8px;
+    border-bottom: 6px solid #2E373E;
+    border-right: 1px solid #2E373E;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.4);
+    text-align: left;
+}
+
+#cv .career-information h3 {
+    margin: 10px 0 6px;
+    color: #2E373E;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+#cv .career-information h4 {
+    margin-bottom: 6px;
+    padding: 0;
+    color: #75B8BD;
+    font-weight: 600;
+    text-align: left;
+}
+
+#cv .career-information p {
+    margin-top: 10px;
+    color: #2E373E;
+    font-size: 15px;
+}
+
+#cv .career-information:after {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-bottom: 15px;
+    border: solid transparent;
+    border-width: 10px;
+    border-right-color: #2E373E;
+    content: '';
+}
+
+/* ========================= */
+/*      DOWNLOAD RESUME      */
+/* ========================= */
+#cv #career-timeline a {
+    position: relative;
+    top: 20px;
+    left: -50px;
+    padding: 10px 30px;
+    color: #75B8BD; 
+    background: #FFF;
+    border-radius: 6px;
+    border-bottom: 6px solid #2E373E;
+    border-right: 1px solid #2E373E;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.4);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+/* ========================= */
+/*         PORTFOLIO         */
+/* ========================= */
+#portfolio {
+    position: relative;
+    width: calc(100% - 17%);
+    left: 17%;
+}
+
+#portfolio h2 {
+    margin: 0;
+    padding: 40px 0 0;
+    color: #2E373E;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    letter-spacing: 2px;
+}
+
+#portfolio .separator i {
+    border-bottom: 4px solid rgb(96, 121, 139);
+}
+
+#portfolio .separator i, #portfolio .separator span {
+    color: #FFF;
+    background: #2E373E;
+}
+
+/* ========================= */
+/*          CAROUSEL         */
+/* ========================= */
+.carousel {
+    width: 90%;
+    margin: 30px auto 100px;
+}
+
+.slick-slide {  
+    margin: 10px;
+}
+
+.slick-slide img{
+    width: 100%; 
+    box-shadow: 2px 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+.slick-prev, .slick-next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #FFF;
+    background: #75B8BD;
+    font-weight: bold;
+}
+
+.slick-prev:before, .slick-next:before {
+    opacity: 1;
+}
+
+.slick-prev {
+    margin-left: -20px;
+}
+
+.slick-next {
+    margin-right: -20px;
+}
+
+.slick-prev:hover ,.slick-next:hover {
+    background: #2E373E; 
+}
+
+
+
+/* ========================= */
+/*         CONTACT ME        */
+/* ========================= */
+#contactme {
+    position: relative;
+    width: calc(100% - 17%);
+    left: 17%;
+    background: #75B8BD;
+}
+
+#contactme h4 {
+    margin: 0;
+    padding: 40px 0 0 0;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+    letter-spacing: 1px;
+}
+
+#contactme h2 {
+    margin: 0;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+    letter-spacing: 2px;
+}
+
+#contactme #informations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; 
+    color: #FFF;
+}
+
+#contactme #informations p {
+    color: #FFF;
+}
+
+#contactme #informations #accroche {
+    text-align: center;
+    color: #FFF;
+}
+
+#contactme #informations div:nth-of-type(2), #contactme #informations div:nth-of-type(3) {
+    margin-left: 100px;
+}
+
+#contactme #informations ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#contactme #informations ul li {
+    margin-bottom: 10px;
+}
+
+#contactme #informations ul li i{
+    width: 50px;
+    text-align: center;
+    background: #FFF;
+    border-radius: 100%;
+    border-bottom: 4px solid #2E373E;
+    color: #75B8BD;
+    line-height: 50px;
+}
+
+#contactme #informations ul span {
+    padding: 8px;
+    margin-left: 20px;
+    border-radius: 6px;
+    border-bottom: 4px solid #2E373E;
+    color: #75B8BD;
+    background: #FFF;    
+    font-weight: bold;
+}
+
+#contactme #informations ul a {
+    color: #75B8BD;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ========================= */
+/*           FOOTER          */
+/* ========================= */
+#footer {
+    position: relative;
+    width: calc(100% - 17%);
+    left: 17%;
+    background: #2E373E;
+}
+
+#footer p {
+    margin: 0;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+}
