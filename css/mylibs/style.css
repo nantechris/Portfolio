@@ -225,7 +225,7 @@ html, body {
     color: #FFF;
     font-weight: 400;
     text-decoration: none;
-    transition: 0.5s ease-in;
+    /* transition: 0.5s ease-in; */
 }
 
 #sidebarMenu #navbar ul li a:hover {
@@ -239,6 +239,19 @@ html, body {
 .active {
     background: #FFF;
     color: #75B8BD !important;
+    border-right-color: #2E373E;
+    border-width: 19px;
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    margin-top: -9px;
+    margin-left: -40px;
+    left: 100%;
+    border: solid transparent;
+    border-width: 19px;
+    border-right-color: #2E373E;
 }
 
 
