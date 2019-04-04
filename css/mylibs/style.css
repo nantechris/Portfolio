@@ -106,7 +106,7 @@ html, body {
 #presentation h1 {
     margin: 50px 0 20px;
     color: #FFF;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
@@ -114,7 +114,7 @@ html, body {
 }
 
 #presentation p {
-    margin: 0 110px;
+    margin: 30px 100px 0;
     color: #FFF;
     font-size: 20px;
     font-weight: normal;
@@ -344,6 +344,11 @@ html, body {
     margin: 0 100px 50px;
     color: #2E373E;
     line-height: 30px;
+}
+
+#aboutme #details ul {
+    margin: 0;
+    padding-left: 70px;
 }
 
 
